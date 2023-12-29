@@ -23,6 +23,7 @@ export class ToolbarComponent {
     translate.setDefaultLang('en');
     translate.addLangs(['en', 'es']);
     translate.use('en');
+    this.selectLang = 'en';
   }
 
   setTransLanguage() {

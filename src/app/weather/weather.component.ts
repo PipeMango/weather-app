@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ApixuService } from '../apixu.service';
+import { ToolbarComponent } from '../toolbar/toolbar.component';
+import { TranslateService } from '@ngx-translate/core'; 
 
 @Component({
   selector: 'app-weather',
