@@ -4,6 +4,7 @@ import { ApixuService } from '../apixu.service';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { TranslateService } from '@ngx-translate/core'; 
 import { SharedService } from '../shared.service';
+import { ViewChild, ElementRef } from '@angular/core';
 
 
 @Component({
@@ -12,6 +13,7 @@ import { SharedService } from '../shared.service';
   styleUrls: ['./weather.component.css']
 })
 export class WeatherComponent implements OnInit {
+  @ViewChild('submitButton') submitButton: ElementRef | undefined;
 
   public weatherSearchForm: FormGroup;
   private apixuService: ApixuService;

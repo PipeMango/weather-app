@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -16,6 +16,8 @@ import { SharedService } from '../shared.service';
 
 })
 export class ToolbarComponent {
+
+  @ViewChild('submitButton') submitButton: ElementRef | undefined;
 
   selectLang: string = '';
   TransLang: string[] = [];
