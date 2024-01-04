@@ -2,9 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
 
-In this project I used WeatherAPI for getting the Real Time Weather depending on the location.
-I used angular material and bootstrap for styling.
-I used rxjs for communicating and shared services for communicating between components.
+In this project I used WeatherAPI for getting the Real Time Weather depending on the location.  <br />
+I used angular material and bootstrap for styling. <br />
+I used rxjs for communicating and shared services for communicating between components. <br />
 I used angular internationalization (i18n) for translating between english and spanish.
 
 ## Development server
