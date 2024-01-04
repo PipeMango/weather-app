@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -6,6 +6,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { Inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core'; 
 import { FormsModule } from '@angular/forms';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -18,16 +19,19 @@ export class ToolbarComponent {
 
   selectLang: string = '';
   TransLang: string[] = [];
+  
 
-  constructor(public translate: TranslateService) {
+  constructor(public translate: TranslateService, private sharedService: SharedService) {
     translate.setDefaultLang('en');
     translate.addLangs(['en', 'es']);
     translate.use('en');
     this.selectLang = 'en';
   }
 
+ 
   setTransLanguage() {
     this.translate.use(this.selectLang);
+    this.sharedService.changeData(this.selectLang);
   }
 
     getTransLanguage(){

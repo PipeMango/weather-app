@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ApixuService } from '../apixu.service';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { TranslateService } from '@ngx-translate/core'; 
+import { SharedService } from '../shared.service';
+
 
 @Component({
   selector: 'app-weather',
@@ -14,7 +16,8 @@ export class WeatherComponent implements OnInit {
   public weatherSearchForm: FormGroup;
   private apixuService: ApixuService;
   public weatherData: any;
-  public selectedLanguage: string = 'en';
+  //public selectedLanguage: string = 'en';
+  sharedData: string = '';
 
   SearchFormLabels={
     title: 'Weather Search',
@@ -23,7 +26,7 @@ export class WeatherComponent implements OnInit {
   }
 
 
-  constructor(private formBuilder: FormBuilder, apixuService: ApixuService) {
+  constructor(private formBuilder: FormBuilder, apixuService: ApixuService, private sharedService: SharedService) {
     this.weatherSearchForm = this.formBuilder.group({
       location: ['']
     });
@@ -31,12 +34,16 @@ export class WeatherComponent implements OnInit {
   }
 
   ngOnInit() { 
+    this.sharedService.currentData.subscribe(data => {
+      this.sharedData = data;
+    });
   }
 
   sendToAPIXU(formValues : any) {
     this.apixuService
-    .getWeather(formValues.location, this.selectedLanguage)
+    .getWeather(formValues.location, this.sharedData)
     .subscribe(data => this.weatherData = data)
     console.log(this.weatherData);
+    console.log(this.sharedData)
   }
 }

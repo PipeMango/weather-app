@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-12">
         <h3 class="text-center my-4">{{'SearchFormLabels.title' | translate}}</h3>
         <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)" >
             <div class="form-group">
@@ -13,14 +13,14 @@
               />  
              </div>
 
-             <div class="text-center"> 
+             <div class="text-center my-4"> 
               <button type="submit" class="btn btn-success btn-md">
                 {{'SearchFormLabels.search' | translate}}</button>
              </div>
            </form> 
         </div>
 
-      <div class="col-md-6"><h3 class="text-center my-4">Weather Details:</h3>
+      <div class="col-md-12"><h3 class="text-center my-4"> {{'DetailLabels.title' | translate}} </h3>
         <p class="text-center"> {{'DetailLabels.conditions' | translate}} {{this.weatherData?.current.condition.text}}</p>
         <p class="text-center"> {{'DetailLabels.DegreesCelsius' | translate}} {{this.weatherData?.current.temp_c}}</p>
         <p class="text-center"> {{'DetailLabels.DegreesFarenheit' | translate}} {{this.weatherData?.current.temp_f}}</p>
@@ -30,3 +30,42 @@
       </div>
     </div>
   </div>
+
+
+  <!-- ><div class="col-md-12" >
+    <h2>{{'DetailLabels.title' | translate}} + {{this.weatherData?.location.name}} , {{this.weatherData?.location.country}}</h2>
+    <h3>{{'DetailLabels.FeelsCelsius' | translate}}</h3>
+    <h1>{{this.weatherData?.current.feelslike_c}}</h1>
+
+    <table mat-table>
+      <tr>
+        <td>Max./Min.</td>
+        <td>{{this.weatherData?.current.condition.text}}</td>
+        <td>{{'DetailLabels.wind' | translate}}</td>
+        <td>{{this.weatherData?.current.wind_kph}}</td>
+        <tr>
+        <td>{{'DetailLabels.Humidity' | translate}}</td>
+        <td>{{this.weatherData?.current.humidity}}</td>
+        <td>{{'DetailLabels.FeelsCelsius' | translate}}</td>
+        <td>{{this.weatherData?.current.feelslike_f}}</td>
+        <tr>
+        <td>{{'DetailLabels.FeelsFarenheit' | translate}}</td>
+        <td>{{this.weatherData?.current.condition.text}}</td>
+        <td>{{'DetailLabels.Location' | translate}}</td>
+        <td>{{this.weatherData?.current.condition.text}}</td>
+        <tr>
+      </tr>
+    </table>
+   </div>
+-->
+<div class="col-md-12" >
+   <div class="weather-widget">
+    <div class="weather-location">San Pedro Sula, Cortés, Honduras</div>
+    <div class="weather-status">As of 2:50 pm CST</div>
+    <div class="weather-info">
+        <div class="temperature">77°</div>
+        <div class="weather-condition">Mostly Cloudy</div>
+        <div class="day-night">Day 77° • Night 66°</div>
+    </div>
+</div>
+</div>
