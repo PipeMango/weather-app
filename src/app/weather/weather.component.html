@@ -20,7 +20,7 @@
            </form> 
         </div>
 
-      <div class="col-md-12"><h3 class="text-center my-4"> {{'DetailLabels.title' | translate}} </h3>
+  <!--  <div class="col-md-12"><h3 class="text-center my-4"> {{'DetailLabels.title' | translate}} </h3>
         <p class="text-center"> {{'DetailLabels.conditions' | translate}} {{this.weatherData?.current.condition.text}}</p>
         <p class="text-center"> {{'DetailLabels.DegreesCelsius' | translate}} {{this.weatherData?.current.temp_c}}</p>
         <p class="text-center"> {{'DetailLabels.DegreesFarenheit' | translate}} {{this.weatherData?.current.temp_f}}</p>
@@ -30,7 +30,7 @@
       </div>
     </div>
   </div>
-
+-->
 
   <!-- ><div class="col-md-12" >
     <h2>{{'DetailLabels.title' | translate}} + {{this.weatherData?.location.name}} , {{this.weatherData?.location.country}}</h2>
@@ -58,14 +58,18 @@
     </table>
    </div>
 -->
-<div class="col-md-12" >
-   <div class="weather-widget">
-    <div class="weather-location">San Pedro Sula, Cortés, Honduras</div>
-    <div class="weather-status">As of 2:50 pm CST</div>
-    <div class="weather-info">
-        <div class="temperature">77°</div>
-        <div class="weather-condition">Mostly Cloudy</div>
-        <div class="day-night">Day 77° • Night 66°</div>
+
+<div class="container-fluid row" >
+   <div class="weather-widget ">
+    <div class="col-12"><span class="weather-location" *ngIf="weatherData">{{this.weatherData?.location.name}}, {{this.weatherData?.location.country}}</span></div>
+    <div class="col-12 weather-status" *ngIf="weatherData">{{'DetailLabels.Asof' | translate}} {{this.weatherData?.current.last_updated}}</div>
+    <div class="weather-info row" *ngIf="weatherData">
+        <div class="temperature col-md-4 col-sm-12 my-2">{{this.weatherData?.current.temp_c}}°C/{{this.weatherData?.current.temp_f}}°F</div>
+        <div class="weather-condition col-md-4 col-sm-12 my-2">{{this.weatherData?.current.condition.text}}</div>
+        <div class="weather-icon col-md-4 col-sm-12 my-2">
+          <img src="{{this.weatherData?.current.condition.icon}}">
+        </div>
+        <!--<div class="day-night">Day 77° • Night 66°</div>-->
     </div>
 </div>
 </div>

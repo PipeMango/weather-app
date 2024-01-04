@@ -11,13 +11,29 @@
    padding-left: 10px; /* adjust according to your icon size */
    color: #fff;
    background-size: cover;
-  
+   min-height: 220px; /* Your desired minimum height */
+   width: 100%; /* Full width */
+}
+
+img.responsive-height {
+    min-height: 2000px; 
+    height: auto; /* This maintains the aspect ratio of the image */
+    width: auto; /* This maintains the aspect ratio of the image */
+    
 }
 
 .weather-location, .weather-status, .weather-alert {
     /* color: #333; */
-    font-size: 14px;
+    font-size: 24px;
+    font-weight: bold;
     margin-bottom: 5px;
+    backdrop-filter: blur(5px);
+    /*filter: grayscale(2.5);*/
+    border-radius: 14px;
+    display: inline-block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    word-wrap: break-word;
+    line-height: 1.4;
 }
 
 .weather-info {
@@ -26,9 +42,12 @@
     justify-content: space-between;
     padding: 18px;
     margin-bottom: 10px;
-    backdrop-filter: blur(15px);
-    filter: grayscale(0.5);
+    backdrop-filter: blur(25px);
+   /*filter: grayscale(2.5);*/
     border-radius: 14px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    word-wrap: break-word;
+    line-height: 1.4;
 }
 
 .temperature {
@@ -37,16 +56,14 @@
     /* color: #fff; */
 }
 
-/* .weather-condition {
-    background-image: url("./clouds.jpg");
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 10px;
-} */
+ .weather-condition {
+    font-size: 36px;
+    font-weight: bold;
+} 
 
 .day-night {
-    font-size: 12px;
-    /* color: #555; */
+    font-size: 36px;
+    font-weight: bold;
 }
 
 .weather-alert {
