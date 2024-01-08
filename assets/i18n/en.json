@@ -1,0 +1,14 @@
+{
+    "SearchFormLabels.title" : "Weather Search",
+    "SearchFormLabels.placeholder" :  "Please enter a location",
+    "SearchFormLabels.search" :  "Search",
+    "DetailLabels.title" : "Weather Details",
+    "DetailLabels.conditions" : "Conditions ",
+    "DetailLabels.DegreesCelsius" : "Temperature in Degrees Celsius: ",
+    "DetailLabels.DegreesFarenheit" : "Temperature in Degrees Fahrenheit: ",
+    "DetailLabels.FeelsCelsius" : "Feels like in Degrees Celsius: ",
+    "DetailLabels.FeelsFarenheit" : "Feels like in Degrees Fahrenheit: ",
+    "DetailLabels.Location" : "Location Searched: ",
+    "DetailLabels.Asof" : "As of "
+  }
+  

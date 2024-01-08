@@ -1,0 +1,13 @@
+{
+    "SearchFormLabels.title" : "Busqueda de clima",
+    "SearchFormLabels.placeholder" :  "Por favor ingrese una ciudad",
+    "SearchFormLabels.search" :  "Buscar",
+    "DetailLabels.title" : "Detalles del clima",
+    "DetailLabels.conditions" : "Condiciones: ",
+    "DetailLabels.DegreesCelsius" : "Temperatura en grados Celsius: ",
+    "DetailLabels.DegreesFarenheit" : "Temperatura en grados Farenheit: ",
+    "DetailLabels.FeelsCelsius" : "Sensación térmica en grados Celsius: ",
+    "DetailLabels.FeelsFarenheit" : "Sensación térmica en grados Fahrenheit: ",
+    "DetailLabels.Location" : "Locación buscada: ",
+    "DetailLabels.Asof" : "A partir de "
+  }
